@@ -9,7 +9,7 @@ cd server
 npm run dev
 ```
 
-后端服务将运行在：`http://localhost:3000`
+后端服务将运行在：`http://localhost:3010`
 
 ### 2. 启动前端应用
 
@@ -71,7 +71,7 @@ npm run prisma:generate
 cd frontend
 
 # 创建 .env 文件
-echo VITE_API_URL=http://localhost:3000 > .env
+echo VITE_API_URL=http://localhost:3010/api > .env
 ```
 
 ---

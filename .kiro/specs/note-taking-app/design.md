@@ -563,8 +563,8 @@ app.use(cors({
 
 ### 开发环境
 
-- 前端: Vite开发服务器（localhost:5173）
-- 后端: Node.js服务器（localhost:3000）
+- 前端: Vite开发服务器（localhost:5174）
+- 后端: Node.js服务器（localhost:3010）
 - 数据库: 本地PostgreSQL实例
 
 ### 生产环境建议
@@ -588,7 +588,7 @@ EMAIL_PASSWORD=your-app-password
 FRONTEND_URL=http://localhost:5173
 
 # 前端
-VITE_API_URL=http://localhost:3000/api
+VITE_API_URL=http://localhost:3010/api
 ```
 
 ## 性能优化

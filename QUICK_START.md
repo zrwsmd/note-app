@@ -83,7 +83,7 @@ npx prisma studio
 
 ### 端口被占用
 
-如果端口 3000 或 5173 被占用：
+如果端口 3010 或 5174 被占用：
 
 **前端**: 修改 `frontend/vite.config.ts` 中的 `server.port`
 **后端**: 修改 `server/.env` 中的 `PORT`

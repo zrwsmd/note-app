@@ -107,7 +107,7 @@ cd server
 npm run dev
 ```
 
-服务器将运行在 http://localhost:3000
+服务器将运行在 http://localhost:3010
 
 **启动前端（终端2）:**
 ```bash
@@ -119,7 +119,7 @@ npm run dev
 
 ### 7. 验证安装
 
-1. 访问 http://localhost:3000/health 应该看到：
+1. 访问 http://localhost:3010/health 应该看到：
 ```json
 {
   "status": "ok",
@@ -134,7 +134,7 @@ npm run dev
 
 ### 端口被占用
 
-如果端口 3000 或 5173 被占用，可以修改：
+如果端口 3010 或 5174 被占用，可以修改：
 
 **后端:** 修改 `server/.env` 中的 `PORT`
 **前端:** 修改 `frontend/vite.config.ts` 中的 `server.port`

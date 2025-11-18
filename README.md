@@ -70,13 +70,13 @@ EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-app-password
-FRONTEND_URL=http://localhost:5173
-PORT=3000
+FRONTEND_URL=http://localhost:5174
+PORT=3010
 ```
 
 **前端 (frontend/.env):**
 ```env
-VITE_API_URL=http://localhost:3000/api
+VITE_API_URL=http://localhost:3010/api
 ```
 
 5. 初始化数据库

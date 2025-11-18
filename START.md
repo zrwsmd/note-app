@@ -104,7 +104,7 @@ npm run preview          # 预览生产版本
 
 ## 端口说明
 
-- **后端 API**: `http://localhost:3000`
+- **后端 API**: `http://localhost:3010`
 - **前端应用**: `http://localhost:5174`
 - **数据库**: `localhost:5432` (PostgreSQL 默认端口)
 

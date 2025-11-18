@@ -12,7 +12,7 @@ const PORT = 3010
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: process.env.FRONTEND_URL || '*',
   credentials: true
 }))
 app.use(express.json())

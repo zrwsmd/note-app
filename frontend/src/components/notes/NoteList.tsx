@@ -14,8 +14,7 @@ export default function NoteList({
   search, 
   isSelectionMode = false, 
   selectedNotes = [], 
-  onToggleSelection,
-  onSelectAll 
+  onToggleSelection
 }: NoteListProps) {
   const navigate = useNavigate()
   const { data: notes, isLoading, error } = useNotes(search)

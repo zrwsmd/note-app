@@ -26,14 +26,6 @@ export default function NotesPage() {
     )
   }
 
-  const handleSelectAll = (noteIds: string[]) => {
-    if (selectedNotes.length === noteIds.length) {
-      setSelectedNotes([])
-    } else {
-      setSelectedNotes(noteIds)
-    }
-  }
-
   const handleBatchDelete = async () => {
     if (selectedNotes.length === 0) return
 
@@ -116,7 +108,6 @@ export default function NotesPage() {
           isSelectionMode={isSelectionMode}
           selectedNotes={selectedNotes}
           onToggleSelection={handleToggleSelection}
-          onSelectAll={handleSelectAll}
         />
       </main>
 

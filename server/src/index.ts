@@ -8,7 +8,7 @@ import noteRoutes from './routes/notes.js'
 dotenv.config()
 
 const app = express()
-const PORT = 3010
+const PORT =  8080
 
 // Middleware
 app.use(cors({

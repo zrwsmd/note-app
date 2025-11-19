@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import cors from 'cors'
+
 import dotenv from 'dotenv'
 import prisma from './prisma.js'
 import authRoutes from './routes/auth.js'

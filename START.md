@@ -9,7 +9,7 @@ cd server
 npm run dev
 ```
 
-后端服务将运行在：`http://localhost:3010`
+后端服务将运行在：`http://localhost:8080`
 
 ### 2. 启动前端应用
 
@@ -71,7 +71,7 @@ npm run prisma:generate
 cd frontend
 
 # 创建 .env 文件
-echo VITE_API_URL=http://localhost:3010/api > .env
+echo VITE_API_URL=http://localhost:8080/api > .env
 ```
 
 ---
@@ -104,7 +104,7 @@ npm run preview          # 预览生产版本
 
 ## 端口说明
 
-- **后端 API**: `http://localhost:3010`
+- **后端 API**: `http://localhost:8080`
 - **前端应用**: `http://localhost:5174`
 - **数据库**: `localhost:5432` (PostgreSQL 默认端口)
 

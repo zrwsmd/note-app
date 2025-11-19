@@ -71,12 +71,12 @@ EMAIL_PORT=587
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASSWORD=your-app-password
 FRONTEND_URL=http://localhost:5174
-PORT=3010
+PORT=8080
 ```
 
 **前端 (frontend/.env):**
 ```env
-VITE_API_URL=http://localhost:3010/api
+VITE_API_URL=http://localhost:8080/api
 ```
 
 5. 初始化数据库

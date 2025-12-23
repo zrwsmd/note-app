@@ -1,5 +1,26 @@
 import prisma from '../prisma.js'
 
+// 从Markdown内容中提取纯文本预览
+function extractPreview(content: string, maxLength: number = 100): string {
+  // 移除Markdown语法符号
+  let text = content
+    .replace(/^#+\s+/gm, '') // 移除标题符号
+    .replace(/\*\*(.+?)\*\*/g, '$1') // 移除粗体
+    .replace(/\*(.+?)\*/g, '$1') // 移除斜体
+    .replace(/~~(.+?)~~/g, '$1') // 移除删除线
+    .replace(/`(.+?)`/g, '$1') // 移除代码
+    .replace(/\[(.+?)\]\(.+?\)/g, '$1') // 移除链接
+    .replace(/!\[.+?\]\(.+?\)/g, '[图片]') // 替换图片
+    .replace(/^>\s+/gm, '') // 移除引用
+    .replace(/^\s*[-*+]\s+/gm, '') // 移除列表符号
+    .replace(/^\s*\d+\.\s+/gm, '') // 移除有序列表
+    .replace(/\n+/g, ' ') // 将换行替换为空格
+    .trim()
+
+  // 截取指定长度
+  return text.substring(0, maxLength)
+}
+
 export class NoteService {
   // 创建笔记
   async createNote(userId: string, title: string, content: string) {
@@ -38,10 +59,10 @@ export class NoteService {
       },
     })
 
-    // 为每个笔记生成预览（前100个字符）
+    // 为每个笔记生成预览（前100个字符，移除Markdown语法）
     return notes.map((note: { id: string; title: string; content: string; createdAt: Date; updatedAt: Date }) => ({
       ...note,
-      preview: note.content.substring(0, 100),
+      preview: extractPreview(note.content),
     }))
   }
 

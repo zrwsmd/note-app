@@ -1,16 +1,18 @@
 # 笔记应用
 
-一个类似印象笔记的在线笔记应用，支持富文本编辑、用户认证和笔记管理。
+一个类似印象笔记的在线笔记应用，支持 Markdown 编辑、用户认证和笔记管理。
 
 ## 功能特性
 
-- ✅ 用户注册和邮箱验证
-- ✅ 用户登录/登出
-- ✅ 富文本笔记编辑器（支持标题、粗体、列表、代码等格式）
+- ✅ 用户注册和登录
+- ✅ Markdown 笔记编辑器（支持标题、列表、代码、表格、数学公式等）
+- ✅ 编辑/预览模式切换
 - ✅ 笔记自动保存
 - ✅ 笔记搜索
+- ✅ 批量删除笔记
 - ✅ 用户数据隔离
 - ✅ 精美的响应式UI
+- ✅ 深色模式支持
 
 ## 技术栈
 
@@ -18,7 +20,7 @@
 - React 18 + TypeScript
 - Vite
 - TailwindCSS
-- TipTap (富文本编辑器)
+- React Markdown (Markdown 编辑器)
 - React Query
 - React Router
 
@@ -28,7 +30,6 @@
 - PostgreSQL
 - Prisma ORM
 - JWT 认证
-- Nodemailer
 
 ## 快速开始
 
@@ -66,11 +67,6 @@ npm install
 ```env
 DATABASE_URL=postgresql://postgres:password@localhost:5432/noteapp
 JWT_SECRET=your-super-secret-jwt-key
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASSWORD=your-app-password
-FRONTEND_URL=http://localhost:5174
 PORT=8080
 ```
 
@@ -161,3 +157,10 @@ npm run build
 ## License
 
 MIT
+
+## 相关文档
+
+- [Markdown 支持文档](./MARKDOWN_SUPPORT.md) - 详细的 Markdown 语法和功能说明
+- [Markdown 迁移指南](./MARKDOWN_MIGRATION.md) - 从富文本编辑器迁移到 Markdown 的指南
+- [快速开始](./QUICK_START.md) - 快速启动指南
+- [部署指南](./DEPLOY_ZEABUR.md) - 部署到 Zeabur 的说明

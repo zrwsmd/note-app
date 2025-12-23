@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useNote, useCreateNote, useUpdateNote, useDeleteNote } from '../hooks/useNotes'
 import { useAutoSave } from '../hooks/useAutoSave'
-import NoteEditor from '../components/notes/NoteEditor'
+import MarkdownEditor from '../components/notes/MarkdownEditor'
 import Button from '../components/common/Button'
 import Input from '../components/common/Input'
 import toast from 'react-hot-toast'
@@ -189,7 +189,7 @@ export default function NoteDetailPage() {
             placeholder="笔记标题"
             className="text-2xl font-bold border-0 focus:ring-0 px-0"
           />
-          <NoteEditor
+          <MarkdownEditor
             content={content}
             onChange={(newContent) => {
               setContent(newContent)

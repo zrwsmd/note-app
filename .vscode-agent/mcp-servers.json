@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "stdio-mcp-server": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "E:\\spring-ai-demo\\stdio-mcp-server\\target\\stdio-mcp-server-0.0.1-SNAPSHOT.jar"
+      ]
+    },
+    "sse-mcp-server": {
+      "url": "http://localhost:8888/sse"
+    }
+  }
+}
